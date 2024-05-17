@@ -1,0 +1,59 @@
+.navbar {
+    background-color: var(--pink);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .logo {
+        a {
+            font-family: var(--main-font);
+            text-transform: uppercase;
+            color: var(--light-purple);
+            letter-spacing: 0.3rem;
+
+            &:hover {
+                color: var(--yellow);
+                transition: 0.3s;
+                letter-spacing: 0.5rem;
+            }
+        }
+    }
+
+    nav {
+        width: 30rem;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            font-family: var(--secondary-font);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            li a {
+                color: var(--light-purple);
+                border-radius: 1rem;
+                padding: 0.2rem 0.7rem;
+
+                &:hover {
+                    color: var(--pink);
+                    box-shadow: inset 140px 0 0 0 var(--yellow);
+                    transition: 0.3s;
+                }
+            }
+
+            .active {
+                color: var(--pink);
+                box-shadow: inset 140px 0 0 0 var(--yellow);
+            }
+        }
+    }
+}

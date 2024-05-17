@@ -1,3 +1,23 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
+
+/*************************** custom css style ********************************/
+:root {
+  /*the website's color palette */
+  --yellow : #fff38a;
+  --light-pink: #d87984;
+  --pink: #d71d52;
+  --light-purple: #eeebfc;
+  --purple: #c77ffc;
+  --brown: #6a4f50;
+  --red: #87020c;
+  --black: #0d0302;
+
+  /*font combinations*/
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +31,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
