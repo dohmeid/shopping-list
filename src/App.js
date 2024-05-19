@@ -1,13 +1,14 @@
 import './App.css';
-import Navbar from "./Navbar/Navbar";
-import Cart from "./Cart/Cart";
-import Product from "./Product/Product";
+import Navbar from "./components/Navbar/Navbar";
+import Cart from "./components/Cart/Cart";
+import Products from "./components/Products/Products";
 
 function App() {
+
   return (
     <div className="App">
       <Navbar />
-      <Product />
+      <Products />
     </div>
   );
 }
