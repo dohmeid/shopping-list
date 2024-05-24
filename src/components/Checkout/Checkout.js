@@ -3,6 +3,7 @@ import classes from './Checkout.module.css';
 
 const Checkout = () => {
 
+    //****************************STATES & HOOKS**********************************
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -11,16 +12,14 @@ const Checkout = () => {
         cardNumber: "",
     });
 
+    //****************************EVENT LISTENERS****************************
     //this function activates when the user clicks on Done button - to submit the form
     const handleFormSubmission = async (e) => {
         e.preventDefault(); //stop the default behaviour of submitting the input's values to the website url
 
         if (isFormValid(formData)) {
-
             //reset the form input fields
-            setFormData((prevState) => ({
-                ...prevState, name: "", email: "", address: "", cardName: "", cardNumber: "",
-            }));
+            setFormData((prevState) => ({ ...prevState, name: "", email: "", address: "", cardName: "", cardNumber: "", }));
             alert("You're order was submitted successfully :)");
         }
         else {
@@ -36,16 +35,13 @@ const Checkout = () => {
 
     //this function validates form input fields
     const isFormValid = (formData) => {
-        let errors = false;
-
         // Check if inputs are empty or spaces
         if (formData.name.trim().length === 0 || formData.email.trim().length === 0
             || formData.address.trim().length === 0 || formData.cardName.trim().length === 0
             || formData.cardNumber.trim().length === 0) {
-            errors = true;
+            return false;
         }
-
-        return errors === false; //reture true if the form is valid -no errors
+        return true; //reture true if the form is valid -no errors
     };
 
     return (

@@ -3,14 +3,11 @@ import classes from './Products.module.css';
 import Product from "../Products/Product/Product";
 import { PRODUCTS } from "../../data/productsList";
 
-const Products = ({ cartItems, setCartItems }) => {
+const Products = () => {
 
     //rendering the nav list
-    const PRODUCTS_LIST = PRODUCTS.map((p) => (
-        <Product key={p.id}
-            productData={p}
-            cartItems={cartItems} setCartItems={setCartItems}
-        />
+    const PRODUCTS_LIST = PRODUCTS.map((product) => (
+        <Product key={product.id} productData={product} />
     ));
 
     return (
