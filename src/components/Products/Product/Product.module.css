@@ -1,7 +1,7 @@
 .productCard {
     width: 18.5rem;
     position: relative;
-    background: var(--yellow);
+    background: var(--pale-pink);
     padding: 1rem 1.3rem;
     font-family: var(--secondary-font);
     border-radius: 1rem;

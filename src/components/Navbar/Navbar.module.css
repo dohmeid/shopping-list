@@ -15,11 +15,10 @@
         a {
             font-family: var(--main-font);
             text-transform: uppercase;
-            color: var(--light-purple);
+            color: var(--yellow);
             letter-spacing: 0.3rem;
 
             &:hover {
-                color: var(--yellow);
                 transition: 0.3s;
                 letter-spacing: 0.5rem;
             }
