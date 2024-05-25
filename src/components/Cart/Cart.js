@@ -4,7 +4,7 @@ import CartItem from "./CartItem/CartItem";
 import { CartContext } from '../../context/cart';
 
 const Cart = () => {
-  const { cartItems, total } = useContext(CartContext);
+  const { cartItems,getTotalPrice, getTotalQuantity } = useContext(CartContext);
 
   //rendering the cart items list
   const CART_LIST = cartItems.map((p) => (
@@ -16,8 +16,8 @@ const Cart = () => {
       <h2>Shopping Cart</h2>
       <ul>{CART_LIST}</ul>
       <div className={classes.info}>
-        <p>{total.totalQuantity} items</p>
-        <p>Grand Total = ${total.totalPrice}</p>
+        <p>{getTotalQuantity()} items</p>
+        <p>Grand Total = ${getTotalPrice()}</p>
       </div>
     </div>
   );

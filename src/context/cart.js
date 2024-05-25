@@ -6,7 +6,6 @@ export const CartProvider = ({ children }) => {
 
     //****************************STATES & HOOKS**********************************
     const [cartItems, setCartItems] = useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []);
-    const [total, setTotal] = useState({ totalPrice: 0, totalQuantity: 0 });
 
     useEffect(() => {
         const cartItems = localStorage.getItem("cartItems");
@@ -19,14 +18,6 @@ export const CartProvider = ({ children }) => {
     useEffect(() => {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }, [cartItems]);
-
-    //compute the total quantity and total price of cart items  whenever cartItems change
-    useEffect(() => {
-        let qauntity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-        let price = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        setTotal({ totalPrice: price, totalQuantity: qauntity });
-    }, [cartItems]);
-
 
     //****************************FUNCTIONS****************************
     //add a product to the cast
@@ -53,14 +44,28 @@ export const CartProvider = ({ children }) => {
         setCartItems(cartItems.filter((cartItem) => cartItem.id !== id));
     }
 
+    //compute the total quantity and total price of cart items  whenever cartItems change
+    const getTotalPrice = () => {
+        let price = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        return price;
+    }
+
+    const getTotalQuantity = () => {
+        let qauntity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+        return qauntity;
+    }
+
+
+
     return (
         <CartContext.Provider
             value={{
                 cartItems,
-                total,
                 addProductToCart,
                 editProuctQauntity,
                 deleteProductFromCart,
+                getTotalPrice,
+                getTotalQuantity,
             }}
         >
             {children}
