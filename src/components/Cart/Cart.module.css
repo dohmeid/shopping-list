@@ -1,0 +1,21 @@
+.container {
+  height: 100%;
+  padding: 3rem 8rem;
+
+  h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-family: var(--main-font);
+    color: var(--light-pink);
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--light-pink);
+  }
+}

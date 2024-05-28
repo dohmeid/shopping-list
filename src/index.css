@@ -1,0 +1,29 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
+
+:root {
+  /*the website's color palette */
+  --yellow: #fff38a;
+  --pale-pink: #ffe3e8;
+  --light-pink: #d87984;
+  --pink: #d71d52;
+  --light-purple: #eeebfc;
+  --purple: #c77ffc;
+  --brown: #6a4f50;
+  --red: #87020c;
+  --black: #0d0302;
+
+  /*font combinations*/
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}

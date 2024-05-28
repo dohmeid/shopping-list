@@ -1,0 +1,18 @@
+.h {
+    padding: 3rem;
+
+    h2{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        font-family: var(--main-font);
+        color: var(--light-pink);
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 20rem);
+        grid-auto-rows: 25rem;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
