@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
     //add a product to the cast
     const addProductToCart = (product) => {
         //check if the item is already in the cart
-        const isItemInCart = cartItems.find((cartItem) => cartItem.id === product.id);
+        const isItemInCart = cartItems.some((cartItem) => cartItem.id === product.id);
 
         // if the item is already in the cart, increase the quantity of the item
         if (isItemInCart) {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classes from './Checkout.module.css';
+import { isFormValid } from "../../Utils/Utility";
 
 const Checkout = () => {
 
@@ -33,16 +34,7 @@ const Checkout = () => {
         setFormData((prevState) => ({ ...prevState, [name]: value }));
     };
 
-    //this function validates form input fields
-    const isFormValid = (formData) => {
-        // Check if inputs are empty or spaces
-        if (formData.name.trim().length === 0 || formData.email.trim().length === 0
-            || formData.address.trim().length === 0 || formData.cardName.trim().length === 0
-            || formData.cardNumber.trim().length === 0) {
-            return false;
-        }
-        return true; //reture true if the form is valid -no errors
-    };
+
 
     return (
         <div className={classes.container}>
